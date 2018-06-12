@@ -1,0 +1,2 @@
+webpackJsonp([0xda9671b3f01],{338:function(t,e){t.exports={data:{markdownRemark:{html:"<p>Wow! I love blogging so much already.</p>\n<p>Yeah, I didn't either.</p>",frontmatter:{date:"November 07, 2017",path:"/projects/bat",title:"this is BAT project"}}},pathContext:{}}}});
+//# sourceMappingURL=path---projects-bat-237332233051b1e5f5ee.js.map
