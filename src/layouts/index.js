@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/header'
 import Footer from '../components/footer'
 import './normalize.css'
 import './skeleton.css'
@@ -17,7 +16,7 @@ const Layout = ({ children, data }) => (
           favicon: 'test',
           name: 'description',
           content:
-            'Lukasz Pietraszek is Poland based freelance UI & Frontend developer who specialises in responsive websites for B2C and B2B clients using HTML5, CSS, and JavaScript.',
+            'Lukasz Pietraszek is Poland based senior freelance UI & Front-end developer who specialises in responsive websites for B2C and B2B clients using HTML5, CSS, and JavaScript.',
         },
         {
           name: 'keywords',
@@ -26,7 +25,6 @@ const Layout = ({ children, data }) => (
         },
       ]}
     />
-    {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
     <div>{children()}</div>
     <Footer />
   </div>

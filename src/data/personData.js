@@ -1,9 +1,12 @@
+const cloudinaryUrl =
+  'https://res.cloudinary.com/dtxfvmuvk/image/upload/v1528781226/'
+
 const about = {
   photo: '/images/lukasz-pietraszek.jpg',
   name: 'Lukasz Pietraszek',
   title: 'Front-end developer',
   about:
-    'Freelance UI/Frontend dev with proven track-record over five years in creating clean, accessible and user-friendly responsive websites. Self motivated and adaptable, independent minded, with a keen eye for detail. Experienced in working with Agile methodologies.',
+    'Freelance UI/Front-end developer with proven track-record over five years in creating clean, accessible and user-friendly responsive websites. Self motivated and adaptable, independent minded, with a keen eye for detail. Experienced in working with Agile methodologies.',
   specialities:
     'Specialities: HTML5, CSS3, Web Design/Development, RWD, Usability, Web Standards, Axure RP',
   cv: {
@@ -58,7 +61,7 @@ const projects = {
           src: '/images/bat/bat-veo-1.jpg',
         },
       ],
-      logo: 'bat-logo.jpg',
+      logo: `${cloudinaryUrl}logos/bat-logo.jpg`,
       name: 'British American Tobacco',
       tech: ['HTML', 'Sass', 'jQuery', 'Bootstrap 3', 'Responsive'],
       year: '2014/2015',
@@ -119,7 +122,7 @@ const projects = {
           url: 'http://www.ab.gr/click2shop/',
         },
       ],
-      logo: 'delhaize-logo.jpg',
+      logo: `${cloudinaryUrl}logos/delhaize-logo.jpg`,
       name: 'Delhaize Group',
       tech: ['SAP Hybris', 'Bootstrap 2 & 3', 'JavaScript', 'Sass&Less'],
       year: '2013/2014',
@@ -141,7 +144,7 @@ const projects = {
           url: 'https://www.gucci.com/us/en/',
         },
       ],
-      logo: 'gucci-logo.jpg',
+      logo: `${cloudinaryUrl}logos/gucci-logo.jpg`,
       name: 'Gucci',
       tech: [
         'SAP Hybris',
@@ -177,7 +180,7 @@ const projects = {
           url: 'http://www.stelladot.com/',
         },
       ],
-      logo: 'jackwills-logo.jpg',
+      logo: `${cloudinaryUrl}logos/jackwills-logo.jpg`,
       name: 'Jack Wills',
       tech: [
         'HTML5',
@@ -219,7 +222,7 @@ const projects = {
           url: 'http://uk.accessorize.com/',
         },
       ],
-      logo: 'monsoon-accessorize-logo.jpg',
+      logo: `${cloudinaryUrl}logos/monsoon-accessorize-logo.jpg`,
       name: 'Monsoon Accessorize',
       tech: ['SAP Hybris', 'jQuery', 'CSS'],
       year: '2013',
@@ -240,7 +243,7 @@ const projects = {
           src: '/images/office/office-1.jpg',
         },
       ],
-      logo: 'office-logo.jpg',
+      logo: `${cloudinaryUrl}logos/phones4u-logo.jpg`,
       name: 'Office Shoes',
       tech: ['SAP Hybris', 'jQuery Mobile', 'CSS', 'HTML'],
       year: '2013/2014',
@@ -261,7 +264,7 @@ const projects = {
           src: '/images/phones4u/phones4u-2.jpg',
         },
       ],
-      logo: 'phones4u-logo.jpg',
+      logo: `${cloudinaryUrl}/logos/poferries-logo.jpg`,
       name: 'Phones 4u',
       tech: ['SAP Hybris', 'Bootstrap 3', 'jQuery', 'Responsive', 'Less'],
       year: '2013',
@@ -283,7 +286,7 @@ const projects = {
           url: 'http://www.poferries.com/',
         },
       ],
-      logo: 'poferries-logo.jpg',
+      logo: `${cloudinaryUrl}logos/poferries-logo.jpg`,
       name: 'P&O Ferries',
       tech: ['SAP Hybris', 'Bootstrap 3', 'jQuery', 'Responsive', 'Less'],
       year: '2014',
@@ -305,7 +308,7 @@ const projects = {
           url: 'http://www.stelladot.com/',
         },
       ],
-      logo: 'stelladot-logo.jpg',
+      logo: `${cloudinaryUrl}logos/stelladot-logo.jpg`,
       name: 'Stella & Dot',
       tech: ['jQuery', 'AJAX', 'AngularJS', 'Git'],
       year: '2016',

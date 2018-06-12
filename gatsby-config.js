@@ -1,11 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: 'Lukasz Pietraszek - Senior UI developer',
+    title: 'Lukasz Pietraszek - Senior Front-end developer',
   },
   plugins: [
     {
       resolve: 'gatsby-plugin-react-helmet',
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/projects`,
+        name: 'markdown-pages',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/projects`,
+        name: 'markdown-pages',
+      },
+    },
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -29,29 +44,6 @@ module.exports = {
         background_color: '#fff',
         theme_color: '#f47a20',
         display: 'fullscreen',
-        icon: '/images/favicons/favicon.ico', // This path is relative to the root of the site.
-        icons: [
-          {
-            src: `/images/favicons/apple-touch-icon-144x144.png`,
-            sizes: '144x144',
-            type: 'image/png',
-          },
-          {
-            src: `/images/favicons/apple-touch-icon-200x200.png`,
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: `/images/favicons/apple-touch-icon-200x200.png`,
-            sizes: '256x256',
-            type: 'image/png',
-          },
-          {
-            src: `/images/favicons/apple-touch-icon-200x200.png`,
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
       },
     },
   ],
