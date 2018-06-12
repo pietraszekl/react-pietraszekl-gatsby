@@ -1,0 +1,14 @@
+.contact-icon {
+  height: 15px;
+  width: 15px;
+  background-size: 15px 15px;
+}
+.icon-github {
+  background-image: url('../images/icons/github.svg');
+}
+.icon-twitter {
+  background-image: url('../images/icons/twitter.svg');
+}
+.icon-linkedin {
+  background-image: url('../images/icons/linkedin.svg');
+}
