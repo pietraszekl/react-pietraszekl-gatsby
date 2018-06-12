@@ -753,7 +753,7 @@ textarea:focus {
   fill: #bbb;
 }
 .skills {
-  background-image: url('../images/abstract-bg.jpg');
+  background-image: url('https://res.cloudinary.com/dtxfvmuvk/image/upload/v1528829411/abstract-bg');
   background-size: cover;
   color: #fff;
   padding-bottom: 5rem;
@@ -789,7 +789,7 @@ textarea:focus {
   text-align: center;
 }
 .testimonials {
-  background-image: url(/static/media/abstract-bg.6fff5527.jpg);
+  background-image: url('https://res.cloudinary.com/dtxfvmuvk/image/upload/v1528829411/abstract-bg');
   background-size: cover;
   color: #fff;
 }
@@ -879,10 +879,13 @@ section.project .slider-nav .slick-prev:before:hover {
 .project-header .icon {
   width: 2rem;
   height: 2rem;
-  fill: #e1e1e1;
+  color: #e1e1e1;
 }
 .project-header .icon:hover {
-  fill: #f47a20;
+  color: #f47a20;
+}
+.project-header .icon-close {
+  font-size: 3rem;
 }
 .porfolio-gallery {
   position: relative;
@@ -906,6 +909,7 @@ section.project .slider-nav .slick-prev:before:hover {
 }
 .navigation-button-back {
   float: right;
+  text-decoration: none;
 }
 @media (min-width: 550px) {
   .skills-list {

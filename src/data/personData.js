@@ -243,7 +243,7 @@ const projects = {
           src: '/images/office/office-1.jpg',
         },
       ],
-      logo: `${cloudinaryUrl}logos/phones4u-logo.jpg`,
+      logo: `${cloudinaryUrl}logos/office-logo.jpg`,
       name: 'Office Shoes',
       tech: ['SAP Hybris', 'jQuery Mobile', 'CSS', 'HTML'],
       year: '2013/2014',
@@ -264,7 +264,7 @@ const projects = {
           src: '/images/phones4u/phones4u-2.jpg',
         },
       ],
-      logo: `${cloudinaryUrl}/logos/poferries-logo.jpg`,
+      logo: `${cloudinaryUrl}/logos/phones4u-logo.jpg`,
       name: 'Phones 4u',
       tech: ['SAP Hybris', 'Bootstrap 3', 'jQuery', 'Responsive', 'Less'],
       year: '2013',
@@ -315,4 +315,24 @@ const projects = {
     },
   },
 }
-export { about, skills, projects }
+const recommendations = [
+  {
+    id: 1,
+    text:
+      "Lukasz is a great addition to our UI team at Portaltech Reply. He is a 'go-to' person when you need a quick and complete solution. Technical and with a keen eye for detail, Lukasz also has the rare quality of genuine self drive which has displayed itself whilst being UI project lead for one of our largest global clients.",
+    author: 'Simon Davies - Lead UI at Portaltech Reply',
+  },
+  {
+    id: 2,
+    text:
+      'Lukasz has a very good knowledge of CSS3 and HTML5. He is really up to date to the new technics and to new frontiers of web developing. His puts his experience and his skills in his job providing opinions even on the UX side. He is a great worker and while we have worked together I haven’t had to assign him few jobs ‘cause he was able to understand what was needed from him by the company. He is always punctual and he has a great respect of the work that is doing.',
+    author: 'Fabio Salimbeni - Front-end developer at BioMed Central',
+  },
+  {
+    id: 3,
+    text:
+      'I had the pleasure working with lukasz and I have absolutely no hesitation to recommend him to anyone. He is a professional, dedicated and hard working individual who keeps himself up to date with the latest technologies and skills. He is a nice guy and I would love to work with him again in the future.',
+    author: 'Ali Khan - UI developer at Portaltech Reply',
+  },
+]
+export { about, skills, projects, recommendations }
