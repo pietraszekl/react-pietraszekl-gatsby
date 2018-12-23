@@ -1,0 +1,60 @@
+@import '../assets/scss/base/_variables';
+// Hero
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.hero {
+  padding-top: 2rem;
+}
+.u-hero-divider {
+  border-color: $orange;
+  width: 15rem;
+  margin: 1rem auto;
+}
+.hero-sub-heading {
+  font-size: 2.4rem;
+  margin-bottom: 0;
+}
+.hero-profile-img {
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.contact-icons {
+  list-style: none;
+  margin-bottom: 0;
+}
+.contact-icons-item {
+  display: inline-block;
+  a {
+    border: 2px solid $gray;
+    border-radius: 50%;
+    padding: 0.5rem;
+    line-height: 1;
+    float: left;
+    margin: 0 0.5rem;
+    &:hover {
+      border-color: $orange;
+      svg {
+        fill: $orange;
+      }
+    }
+  }
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    float: left;
+    fill: $gray;
+  }
+}
+.contact-icon {
+  height: 2rem;
+  width: 2rem;
+  background-size: 2rem 2rem;
+}
+.icon-github {
+  background-image: url('../assets/images/icons/github.svg');
+}
+.icon-twitter {
+  background-image: url('../assets/images/icons/twitter.svg');
+}
+.icon-linkedin {
+  background-image: url('../assets/images/icons/linkedin.svg');
+}

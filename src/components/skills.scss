@@ -1,0 +1,27 @@
+// Skills
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.skills {
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 5rem;
+}
+.skills-list {
+  list-style: none;
+}
+@media (min-width: 550px) {
+  .skills-list {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .skills-list-item {
+    width: 50%;
+    float: left;
+    display: inline-block;
+  }
+}
+// Bigger than 1000
+@media (min-width: 1000px) {
+  .skills-list {
+    width: 50%;
+  }
+}

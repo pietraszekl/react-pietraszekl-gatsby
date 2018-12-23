@@ -1,4 +1,6 @@
 import React from 'react'
+import BackgroundImage from './background-image.js'
+import './skills.scss'
 import Skill from './skill.js'
 
 const Skills = ({ skills }) => {
@@ -6,7 +8,13 @@ const Skills = ({ skills }) => {
     <Skill key={i} skill={skill} />
   ))
   return (
-    <section className="section skills">
+    <section
+      className="section skills"
+      style={{
+        position: 'relative',
+      }}
+    >
+      <BackgroundImage />
       <div className="container">
         <h2 className="section-heading">{skills.header}</h2>
         <div className="row">

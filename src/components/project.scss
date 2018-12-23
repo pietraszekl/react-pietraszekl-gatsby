@@ -1,0 +1,86 @@
+@import '../assets/scss/base/_variables';
+// Project Details page
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+section.project {
+  text-align: left;
+  .section-description {
+    max-width: 100%;
+  }
+  .slider-nav {
+    img {
+      border: 1px solid $dark-grey;
+      padding: .5rem;
+    }
+    .slick-active {
+      img {
+        border-color: $orange;
+      }
+    }
+    .slick-slide {
+      margin-right: 1rem;
+      &:last-child{
+        margin-right: 0;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .slick-prev:before, .slick-next:before {
+      color: $dark-grey;
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}
+.project-release-label {
+  font-weight: 600;
+}
+.project-page {
+  padding: 0;
+  margin: 0;
+  background: rgba(0, 0 , 0, .05);
+}
+.project-header {
+  background: white;
+  padding: 2px 0;
+  border-bottom: 1px solid $gray;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  text-align: center;
+  .icon {
+    width: 2rem;
+    height: 2rem;
+    fill: $light-grey;
+    &:hover {
+      fill: $orange;
+    }
+  }
+}
+.porfolio-gallery {
+  position: relative;
+}
+.list-two-columns {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+}
+// Project Navigation
+// ----------------------------------------------
+.navigation-button-nav, .navigation-button-back{
+  border: none;
+  padding: 0;
+  line-height: 1;
+}
+.navigation-button-nav {
+  float: left;
+}
+.navigation-button-back{
+  float: right;
+}

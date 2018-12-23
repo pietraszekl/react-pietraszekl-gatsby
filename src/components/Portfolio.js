@@ -1,5 +1,6 @@
 import React from 'react'
 import Project from './project'
+import './portfolio.scss'
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -13,12 +14,12 @@ class Portfolio extends React.Component {
     const self = this
     let appData = this.props.projects
     this.setState({
-      projectsData: this.props.projects
+      projectsData: this.props.projects,
     })
 
     let projects = this.props.projects.list
 
-    Object.keys(projects).forEach(function (project) {
+    Object.keys(projects).forEach(function(project) {
       let project_id = project
       let item = appData.list[project_id]
       self.add(item)

@@ -1,9 +1,9 @@
 import React from 'react'
 import SocialLink from './sociallink'
-import personPhoto from '../assets/images/lukasz-pietraszek.png'
-import personLogo from '../assets/images/looca-side-b.png'
+import HeroImage from "./hero-image"
+
 import cv from '../assets/docs/Lukasz_Pietraszek_CV.pdf'
-import '../assets/css/hero.css'
+import './hero.scss'
 
 const Hero = ({ person }) => {
   const ConnectList = person.connect.map((connect, i) => (
@@ -14,9 +14,8 @@ const Hero = ({ person }) => {
       <div className="container">
         <div className="row">
           <div className="hero-profile-img flip-container ">
-            <div className="flipper">
-              <img className="front" src={personPhoto} alt={person.name} />
-              <img className="back" src={personLogo} alt="looca" />
+            <div className="flipper" >
+              <HeroImage />
             </div>
           </div>
           <h2 className="hero-sub-heading">{person.title}</h2>
@@ -30,7 +29,7 @@ const Hero = ({ person }) => {
           </a>
         </div>
       </div>
-    </section>
+    </section >
   )
 }
 

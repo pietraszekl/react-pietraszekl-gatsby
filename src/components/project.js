@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-
+import './project.scss'
 class Project extends React.Component {
   render() {
     const { project } = this.props.project

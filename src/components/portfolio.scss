@@ -1,0 +1,29 @@
+@import '../assets/scss/base/_variables';
+
+// Projects list
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.projects {
+  .four:nth-child(3n + 1) {
+    margin-left: 0;
+  }
+  .project-thumbnail {
+    position: relative;
+    .view-more {
+      position: absolute;
+      bottom: 5px;
+      width: 100%;
+      text-align: center;
+      font-size: 1.2rem;
+      -webkit-transition: opacity 0.5s ease-in-out;
+      transition: opacity 0.5s ease-in-out;
+      opacity: 0;
+    }
+    &:hover {
+      .view-more {
+        display: block;
+        opacity: 1;
+        color: $orange;
+      }
+    }
+  }
+}
