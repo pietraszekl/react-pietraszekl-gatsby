@@ -9,7 +9,7 @@ section.project {
   .slider-nav {
     img {
       border: 1px solid $dark-grey;
-      padding: .5rem;
+      padding: 0.5rem;
     }
     .slick-active {
       img {
@@ -18,14 +18,15 @@ section.project {
     }
     .slick-slide {
       margin-right: 1rem;
-      &:last-child{
+      &:last-child {
         margin-right: 0;
       }
       &:hover {
         cursor: pointer;
       }
     }
-    .slick-prev:before, .slick-next:before {
+    .slick-prev:before,
+    .slick-next:before {
       color: $dark-grey;
       &:hover {
         color: $orange;
@@ -39,7 +40,7 @@ section.project {
 .project-page {
   padding: 0;
   margin: 0;
-  background: rgba(0, 0 , 0, .05);
+  background: rgba(0, 0, 0, 0.05);
 }
 .project-header {
   background: white;
@@ -52,9 +53,8 @@ section.project {
   z-index: 100;
   text-align: center;
   .icon {
-    width: 2rem;
-    height: 2rem;
-    fill: $light-grey;
+    font-size: 2.5rem;
+    color: $light-grey;
     &:hover {
       fill: $orange;
     }
@@ -64,16 +64,17 @@ section.project {
   position: relative;
 }
 .list-two-columns {
-    -webkit-column-count: 2;
-       -moz-column-count: 2;
-            column-count: 2;
-    -webkit-column-gap: 20px;
-       -moz-column-gap: 20px;
-            column-gap: 20px;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
 }
 // Project Navigation
 // ----------------------------------------------
-.navigation-button-nav, .navigation-button-back{
+.navigation-button-nav,
+.navigation-button-back {
   border: none;
   padding: 0;
   line-height: 1;
@@ -81,6 +82,14 @@ section.project {
 .navigation-button-nav {
   float: left;
 }
-.navigation-button-back{
+.navigation-button-back {
   float: right;
+  text-decoration: none;
+}
+.slideshow {
+  &__slides {
+    img {
+      max-width: 100%;
+    }
+  }
 }
