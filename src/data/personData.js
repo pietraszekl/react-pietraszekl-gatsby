@@ -10,7 +10,7 @@ const about = {
   specialities:
     'Specialities: HTML5, CSS3, Web Design/Development, RWD, Usability, Web Standards, Axure RP',
   cv: {
-    btnLink: '#',
+    btnLink: 'static/Lukasz_Pietraszek_CV.pdf',
     btnTxt: 'Download my CV',
   },
   connect: [

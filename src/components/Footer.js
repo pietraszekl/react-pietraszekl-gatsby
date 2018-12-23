@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import PropTypes from 'prop-types'
 
-const Footer = ({ siteTitle }) => (
+const Footer = ({ footerText }) => (
   <footer
     style={{
       backgroundColor: '#23232c',
@@ -16,10 +16,20 @@ const Footer = ({ siteTitle }) => (
           fontSize: '80%',
         }}
       >
-        Built by Lukasz Pietraszek using React and Gatsby.
+        {footerText}
       </small>
     </div>
   </footer>
 )
+
+
+Footer.propTypes = {
+  footerText: PropTypes.string,
+}
+
+Footer.defaultProps = {
+  footerText: ``,
+}
+
 
 export default Footer

@@ -1,5 +1,5 @@
 import React from 'react'
-import Project from './Project'
+import Project from './project'
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -9,14 +9,16 @@ class Portfolio extends React.Component {
       projectsList: [],
     }
   }
-  componentWillMount() {
+  componentDidMount() {
     const self = this
-    console.log('this props', this.props.projects)
     let appData = this.props.projects
-    this.state.projectsData = this.props.projects
+    this.setState({
+      projectsData: this.props.projects
+    })
+
     let projects = this.props.projects.list
 
-    Object.keys(projects).forEach(function(project) {
+    Object.keys(projects).forEach(function (project) {
       let project_id = project
       let item = appData.list[project_id]
       self.add(item)

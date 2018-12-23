@@ -1,5 +1,5 @@
 import React from 'react'
-import Skill from './Skill.js'
+import Skill from './skill.js'
 
 const Skills = ({ skills }) => {
   const SkillsList = skills.list.map((skill, i) => (

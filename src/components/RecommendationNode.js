@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Recommendation = ({ recommendation }) => {
-  console.log('recommendation', recommendation)
+
   return (
     <div className="slide slide--active">
       <p className="slide__text"> {recommendation.text}</p>

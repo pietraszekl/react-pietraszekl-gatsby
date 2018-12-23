@@ -1,9 +1,9 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import SocialLink from './SocialLink'
+import SocialLink from './sociallink'
 import personPhoto from '../images/lukasz-pietraszek.png'
 import personLogo from '../images/looca-side-b.png'
-import './hero.css'
+import cv from '../static/Lukasz_Pietraszek_CV.pdf'
+import '../css/hero.css'
 
 const Hero = ({ person }) => {
   const ConnectList = person.connect.map((connect, i) => (
@@ -25,7 +25,7 @@ const Hero = ({ person }) => {
           <ul className="contact-icons twelve columns">{ConnectList}</ul>
           <p className="section-description">{person.about}</p>
           <p className="section-description">{person.specialities}</p>
-          <a href={person.cv.btnLink} className="button" target="blank">
+          <a href={cv} className="button" target="blank">
             {person.cv.btnTxt}
           </a>
         </div>
