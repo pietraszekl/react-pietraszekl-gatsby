@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
 
 
@@ -14,9 +15,9 @@ export default function Template({
       <header className="project-header">
         <div className="container">
           <span className="navigation-header-title">Projects</span>
-          <a className="navigation-button-back" href="/">
+          <Link to="/" className="navigation-button-back" href="/">
             <span className="icon icon-close">×</span>
-          </a>
+          </Link>
         </div>
       </header>
       <section className="section project">
@@ -34,7 +35,7 @@ export default function Template({
             <div className="twelve columns">
               <span className="list-heading">Tech stack: </span>
               {frontmatter.tags.map(tag => (
-                <span key={tag.fieldValue}>{tag} / </span>
+                <span key={tag}>{tag} / </span>
               ))}
             </div>
           </div>
@@ -49,7 +50,7 @@ export default function Template({
           <div className="row">
             <div className="slideshow">
               {frontmatter.screenshots.map(image => (
-                <div className="slideshow__slides" key={image.fieldValue}>
+                <div className="slideshow__slides" key={image}>
                   <img src={cloudinaryUrl + image} alt="" />
                 </div>
               ))}

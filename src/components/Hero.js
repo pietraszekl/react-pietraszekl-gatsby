@@ -1,9 +1,9 @@
 import React from 'react'
 import SocialLink from './sociallink'
-import personPhoto from '../images/lukasz-pietraszek.png'
-import personLogo from '../images/looca-side-b.png'
-import cv from '../static/Lukasz_Pietraszek_CV.pdf'
-import '../css/hero.css'
+import personPhoto from '../assets/images/lukasz-pietraszek.png'
+import personLogo from '../assets/images/looca-side-b.png'
+import cv from '../assets/docs/Lukasz_Pietraszek_CV.pdf'
+import '../assets/css/hero.css'
 
 const Hero = ({ person }) => {
   const ConnectList = person.connect.map((connect, i) => (
@@ -23,10 +23,10 @@ const Hero = ({ person }) => {
           <hr className="u-hero-divider" />
           <h1 className="hero-heading">{person.name}</h1>
           <ul className="contact-icons twelve columns">{ConnectList}</ul>
-          <p className="section-description">{person.about}</p>
-          <p className="section-description">{person.specialities}</p>
-          <a href={cv} className="button" target="blank">
-            {person.cv.btnTxt}
+          <p className="section-description">{person.intro}</p>
+
+          <a href={cv} className="button" target="_blank" rel="noopener noreferrer">
+            {person.btnText}
           </a>
         </div>
       </div>

@@ -1,17 +1,22 @@
+
+
+var aboutData = require("./src/data/about.js");
 module.exports = {
   siteMetadata: {
     title: `Lukasz Pietraszek - Senior Front-end developer `,
     description: `Freelance Front-end developer with proven track-record over six years in creating clean, accessible and user-friendly responsive websites. Self motivated and adaptable, independent minded, with a keen eye for detail. Experienced in working with Agile methodologies.`,
     author: `@pietraszekl`,
-    footer: `Built by Lukasz Pietraszek using React and Gatsby.`
+    footer: `Built by Lukasz Pietraszek using React and Gatsby.`,
+    aboutData: aboutData
   },
+
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -48,7 +53,7 @@ module.exports = {
         background_color: '#fff',
         theme_color: '#f47a20',
         display: 'fullscreen',
-        icon: 'src/images/favicons/website-icon.png',
+        icon: 'src/assets/images/favicons/website-icon.png',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
