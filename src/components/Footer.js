@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './footer.scss'
 
-
 const Footer = ({ footerText }) => (
   <footer
     style={{
@@ -24,7 +23,6 @@ const Footer = ({ footerText }) => (
   </footer>
 )
 
-
 Footer.propTypes = {
   footerText: PropTypes.string,
 }
@@ -32,6 +30,5 @@ Footer.propTypes = {
 Footer.defaultProps = {
   footerText: ``,
 }
-
 
 export default Footer

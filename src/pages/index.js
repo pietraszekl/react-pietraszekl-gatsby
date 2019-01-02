@@ -10,7 +10,7 @@ import Portfolio from '../components/portfolio'
 import Recommendations from '../components/recommendations'
 const IndexPage = () => (
   <Layout>
-    <SEO title="LP" keywords={[`frontend`, `JavaScript`]} />
+    <SEO title="Hello" keywords={[`frontend`, `JavaScript`]} />
 
     <StaticQuery
       query={graphql`
@@ -23,7 +23,6 @@ const IndexPage = () => (
                   name
                   title
                   intro
-                  specialities
                   btnText
                   connect {
                     icon

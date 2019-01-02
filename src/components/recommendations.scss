@@ -8,3 +8,17 @@
 .testimonials .section-description {
   margin-bottom: 4rem;
 }
+.testimonial {
+  margin: 0 0 2rem;
+  &__text {
+    font-family: 'Noto Serif SC';
+    font-style: italic;
+    margin: 0 0;
+  }
+  &__caption {
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin: 1rem;
+    text-align: right;
+  }
+}

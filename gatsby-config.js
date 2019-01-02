@@ -1,13 +1,11 @@
-
-
-var aboutData = require("./src/data/about.js");
+var aboutData = require('./src/data/about.js')
 module.exports = {
   siteMetadata: {
-    title: `Lukasz Pietraszek - Senior Front-end developer `,
-    description: `Freelance Front-end developer with proven track-record over six years in creating clean, accessible and user-friendly responsive websites. Self motivated and adaptable, independent minded, with a keen eye for detail. Experienced in working with Agile methodologies.`,
+    title: `Łukasz Pietraszek - Senior Front-end developer`,
+    description: `Freelance Front-end developer from Poland with proven track-record over six years in accessible and user-friendly B2C and B2B responsive websites. Experienced in working with SAP Hybris.`,
     author: `@pietraszekl`,
-    footer: `Built by Lukasz Pietraszek using React and Gatsby.`,
-    aboutData: aboutData
+    footer: `Built with React and Gatsby, running on Netlify`,
+    aboutData: aboutData,
   },
 
   plugins: [
@@ -42,6 +40,14 @@ module.exports = {
         respectDNT: true,
         // Avoids sending pageview hits from custom paths
         exclude: ['/preview/**', '/do-not-track/me/too/'],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Noto Serif SC'],
+        },
       },
     },
     {

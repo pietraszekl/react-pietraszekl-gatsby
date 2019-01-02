@@ -5,3 +5,12 @@
  */
 
 // You can delete this file if you're not using it
+const React = require('react')
+
+exports.onRenderBody = ({ setPreBodyComponents }) => {
+  setPreBodyComponents([
+    <noscript key="noscript">
+      Your browser does not support JavaScript!
+    </noscript>,
+  ])
+}

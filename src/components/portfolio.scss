@@ -8,6 +8,9 @@
   }
   .project-thumbnail {
     position: relative;
+    @media (max-width: 549px) {
+      width: 33%;
+    }
     .view-more {
       position: absolute;
       bottom: 5px;
@@ -17,12 +20,12 @@
       -webkit-transition: opacity 0.5s ease-in-out;
       transition: opacity 0.5s ease-in-out;
       opacity: 0;
+      color: $orange;
     }
     &:hover {
       .view-more {
         display: block;
         opacity: 1;
-        color: $orange;
       }
     }
   }
