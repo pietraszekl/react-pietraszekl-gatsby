@@ -10,7 +10,17 @@ import Portfolio from '../components/portfolio'
 import Recommendations from '../components/recommendations'
 const IndexPage = () => (
   <Layout>
-    <SEO title="LP" keywords={[`frontend`, `JavaScript`]} />
+    <SEO
+      title="Senior Frontend Developer - Remote Gliwice Katowice"
+      keywords={[
+        `frontend developer`,
+        `frontend`,
+        `JavaScript`,
+        `Remote`,
+        `Katowice`,
+        `Gliwice`,
+      ]}
+    />
 
     <StaticQuery
       query={graphql`

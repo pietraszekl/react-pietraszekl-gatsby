@@ -1,6 +1,6 @@
 import React from 'react'
 import SocialLink from './sociallink'
-import HeroImage from "./hero-image"
+import HeroImage from './hero-image'
 
 import cv from '../assets/docs/Lukasz_Pietraszek_CV.pdf'
 import './hero.scss'
@@ -14,7 +14,7 @@ const Hero = ({ person }) => {
       <div className="container">
         <div className="row">
           <div className="hero-profile-img flip-container ">
-            <div className="flipper" >
+            <div className="flipper">
               <HeroImage />
             </div>
           </div>
@@ -24,12 +24,17 @@ const Hero = ({ person }) => {
           <ul className="contact-icons twelve columns">{ConnectList}</ul>
           <p className="section-description">{person.intro}</p>
 
-          <a href={cv} className="button" target="_blank" rel="noopener noreferrer">
+          <a
+            href={cv}
+            className="button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {person.btnText}
           </a>
         </div>
       </div>
-    </section >
+    </section>
   )
 }
 

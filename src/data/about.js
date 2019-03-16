@@ -5,9 +5,9 @@ module.exports = {
   person: {
     photo: '/assets/images/lukasz-pietraszek.jpg',
     name: 'Lukasz Pietraszek',
-    title: 'Front-end developer',
+    title: 'Senior Frontend Developer',
     intro:
-      'Freelance Front-end developer with proven track-record over six years in creating clean, accessible and user-friendly responsive websites. Self motivated and adaptable, independent minded, with a keen eye for detail. Experienced in working with Agile methodologies.',
+      'Freelance Frontend Developer with proven track-record over six years in creating clean, accessible and user-friendly responsive websites. Self motivated and adaptable, independent minded, with a keen eye for detail. Experienced in working remotely and as lead developer.',
     specialities:
       'Specialities: HTML5, CSS3, JavaScript, RWD, Usability, Web Standards',
     btnText: `Download my CV`,
@@ -36,8 +36,10 @@ module.exports = {
     list: [
       'HTML5 & CSS3',
       'JavaScript & jQuery',
+      'Webpack & ES6',
       'Git & SVN',
       'SASS & LESS',
+      'SAP Hybris',
       'Agile/Scrum experience',
       'Responsive/mobile-first sites',
     ],
@@ -53,7 +55,7 @@ module.exports = {
       id: 2,
       text:
         'Lukasz has a very good knowledge of CSS3 and HTML5. He is really up to date to the new technics and to new frontiers of web developing. His puts his experience and his skills in his job providing opinions even on the UX side. He is a great worker and while we have worked together I haven’t had to assign him few jobs ‘cause he was able to understand what was needed from him by the company. He is always punctual and he has a great respect of the work that is doing.',
-      author: 'Fabio Salimbeni - Front-end developer at BioMed Central',
+      author: 'Fabio Salimbeni - Frontend developer at BioMed Central',
     },
     {
       id: 3,
@@ -63,12 +65,14 @@ module.exports = {
     },
   ],
   projects: {
-    title: "Projects",
-    intro: "During my 6+ years of professional experience I have helped build websites and services for well-known companies - B2C and B2B as well as for independet artisits and charities. Click on the logos of selected projects for more details.",
+    title: 'Projects',
+    intro:
+      'During my 6+ years of professional experience I have helped build websites and services for well-known companies - B2C and B2B as well as for independet artisits and charities. Click on the logos of selected projects for more details.',
     list: [
       {
         id: 'bat',
-        desc: "B2B project developed for British American Tobacco Australia to provided their client base with the best possible experience for desktop as well as tablet/mobile devices when ordering larger volumes of products.",
+        desc:
+          'B2B project developed for British American Tobacco Australia to provided their client base with the best possible experience for desktop as well as tablet/mobile devices when ordering larger volumes of products.',
         img: [
           {
             altText: 'British American Tobacco wesbite',
@@ -327,10 +331,7 @@ module.exports = {
         name: 'Stella & Dot',
         tech: ['jQuery', 'AJAX', 'AngularJS', 'Git'],
         year: '2016',
-      }
-    ]
-  }
-
-
-
+      },
+    ],
+  },
 }

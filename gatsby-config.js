@@ -1,13 +1,11 @@
-
-
-var aboutData = require("./src/data/about.js");
+var aboutData = require('./src/data/about.js')
 module.exports = {
   siteMetadata: {
-    title: `Lukasz Pietraszek - Senior Front-end developer `,
-    description: `Freelance Front-end developer with proven track-record over six years in creating clean, accessible and user-friendly responsive websites. Self motivated and adaptable, independent minded, with a keen eye for detail. Experienced in working with Agile methodologies.`,
+    title: `Lukasz Pietraszek`,
+    description: `Freelance Frontend developer with proven track-record over six years in creating clean, accessible and user-friendly responsive websites. Self motivated and adaptable, independent minded, with a keen eye for detail. Experienced in working remotely and as lead developer.`,
     author: `@pietraszekl`,
     footer: `Built by Lukasz Pietraszek using React and Gatsby.`,
-    aboutData: aboutData
+    aboutData: aboutData,
   },
 
   plugins: [
@@ -47,7 +45,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Lukasz Pietraszek - Front-end developer',
+        name: 'Lukasz Pietraszek - Frontend developer',
         short_name: 'Pietraszek',
         start_url: '/',
         background_color: '#fff',
