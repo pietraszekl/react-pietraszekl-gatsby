@@ -67,7 +67,7 @@ const IndexPage = () => (
       `}
       render={data => (
         <>
-          <Hero person={data.site.siteMetadata.aboutData.person} />
+          <Hero />
           <Skills skills={data.site.siteMetadata.aboutData.skills} />
           <Portfolio projects={data.site.siteMetadata.aboutData.projects} />
           <Recommendations

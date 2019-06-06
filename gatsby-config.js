@@ -1,4 +1,9 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 var aboutData = require('./src/data/about.js')
+
 module.exports = {
   siteMetadata: {
     title: `Lukasz Pietraszek`,
@@ -10,6 +15,17 @@ module.exports = {
 
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        // This type will contain remote schema Query type
+        typeName: process.env.GRAPHCMS_API_TYPENAME,
+        // This is field under which it's accessible
+        fieldName: process.env.GRAPHCMS_API_FIELDNAME,
+        // Url to query from
+        url: process.env.GRAPHCMS_API_URL,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
