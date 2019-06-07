@@ -1,7 +1,7 @@
 import React from 'react'
 //import { StaticQuery, graphql } from 'gatsby'
 // import HeroImage from './HeroImage'
-import cv from '../assets/docs/Lukasz_Pietraszek_CV.pdf'
+//import cv from '../assets/docs/Lukasz_Pietraszek_CV.pdf'
 import './hero.scss'
 
 const Hero = ({ aboutAuthor: { jobtitle, name, bio } }) => {
@@ -38,7 +38,7 @@ const Hero = ({ aboutAuthor: { jobtitle, name, bio } }) => {
           <p className="section-description">{bio}</p>
 
           <a
-            href={cv}
+            href="/"
             className="button"
             target="_blank"
             rel="noopener noreferrer"

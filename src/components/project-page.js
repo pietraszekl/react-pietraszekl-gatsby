@@ -2,7 +2,7 @@ import { graphql, Link } from 'gatsby'
 import React from 'react'
 import Image from 'gatsby-image'
 import SEO from '../components/seo'
-import './project.scss'
+
 export default ({ data }) => {
   const project = data.cms.project
   return (

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Project from './project'
-//import './portfolio.scss'
+import Project from './Project'
+import './portfolio.scss'
 
 const Portfolio = ({ projects }) => {
   console.log('projects', projects)

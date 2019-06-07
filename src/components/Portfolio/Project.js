@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { makeProjectPath } from '../utils'
+import { makeProjectPath } from '../../utils'
+import './project.scss'
 class Project extends React.Component {
   render() {
     const project = this.props.project

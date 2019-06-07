@@ -1,4 +1,4 @@
-@import '../assets/scss/base/_variables';
+@import '../../assets/scss/base/_variables';
 // Hero
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .hero {
@@ -55,11 +55,11 @@
   background-size: 2rem 2rem;
 }
 .icon-github {
-  background-image: url('../assets/images/icons/github.svg');
+  background-image: url('../../assets/images/icons/github.svg');
 }
 .icon-twitter {
-  background-image: url('../assets/images/icons/twitter.svg');
+  background-image: url('../../assets/images/icons/twitter.svg');
 }
 .icon-linkedin {
-  background-image: url('../assets/images/icons/linkedin.svg');
+  background-image: url('../../assets/images/icons/linkedin.svg');
 }

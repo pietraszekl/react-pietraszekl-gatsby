@@ -1,5 +1,5 @@
 import React from 'react'
-import Recommendation from './recommendationnode'
+import Recommendation from './RecommendationNode'
 
 const Recommendations = ({ recommendations }) => {
   const RecommendationsList = recommendations.map(recommendation => (
