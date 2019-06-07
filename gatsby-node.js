@@ -1,47 +1,72 @@
-// /**
-//  * Implement Gatsby's Node APIs in this file.
-//  *
-//  * See: https://www.gatsbyjs.org/docs/node-apis/
-//  */
+const path = require(`path`)
+const remark = require(`remark`)
+const html = require(`remark-html`)
+const dateformat = require(`dateformat`)
+const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
+const { makeProjectPath } = require(`./src/utils`)
 
-// // You can delete this file if you're not using it
+exports.createPages = async ({ actions, graphql }) => {
+  const { data } = await graphql(`
+    query {
+      cms {
+        projects(where: { status: PUBLISHED }) {
+          id
+          createdAt
+          slug
+        }
+      }
+    }
+  `)
 
-// const path = require('path')
+  data.cms.projects.forEach(project => {
+    actions.createPage({
+      path: makeProjectPath(project),
+      component: path.resolve(`./src/components/project-page.js`),
+      context: {
+        blogId: project.id,
+      },
+    })
+  })
+}
 
-// exports.createPages = ({ actions, graphql }) => {
-//   const { createPage } = actions
-
-//   const blogPostTemplate = path.resolve(`src/templates/projectTemplate.js`)
-
-//   return graphql(`
-//     {
-//       allMarkdownRemark(
-//         sort: { order: DESC, fields: [frontmatter___date] }
-//         limit: 1000
-//       ) {
-//         edges {
-//           node {
-//             frontmatter {
-//               path
-//               tags
-//               released
-//               screenshots
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `).then(result => {
-//     if (result.errors) {
-//       return Promise.reject(result.errors)
-//     }
-
-//     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-//       createPage({
-//         path: node.frontmatter.path,
-//         component: blogPostTemplate,
-//         context: {}, // additional data can be passed via context
-//       })
-//     })
-//   })
-// }
+exports.createResolvers = ({
+  actions,
+  cache,
+  createNodeId,
+  createResolvers,
+  store,
+}) => {
+  const { createNode } = actions
+  createResolvers({
+    GraphCMS_Project: {
+      createdAt: {
+        type: `String`,
+        resolve(source, args, context, info) {
+          return dateformat(source.date, `fullDate`)
+        },
+      },
+      desc: {
+        resolve(source, args, context, info) {
+          return remark()
+            .use(html)
+            .processSync(source.desc).contents
+        },
+      },
+    },
+    GraphCMS_Asset: {
+      imageFile: {
+        type: `File`,
+        // projection: { url: true },
+        resolve(source, args, context, info) {
+          return createRemoteFileNode({
+            url: source.url,
+            store,
+            cache,
+            createNode,
+            createNodeId,
+          })
+        },
+      },
+    },
+  })
+}

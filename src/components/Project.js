@@ -1,20 +1,17 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import './project.scss'
+import { Link } from 'gatsby'
+import { makeProjectPath } from '../utils'
 class Project extends React.Component {
   render() {
-    const { project } = this.props.project
+    const project = this.props.project
+    console.log('wat', project.title)
     return (
       <Link
-        to={'/projects/' + project.id}
+        to={makeProjectPath(project)}
         className="four columns img-grayscale-color project-thumbnail"
       >
-        <img
-          className="u-max-full-width"
-          src={project.logo}
-          alt={project.name}
-        />
-        <div className="view-more">More details</div>
+        <img className="u-max-full-width" src="" alt="" />
+        <div className="view-more">{project.title}</div>
       </Link>
     )
   }
