@@ -8,15 +8,13 @@ function SEO({ description, lang, meta, keywords, title }) {
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description
+        const metaDescription = description || data.cms.seo.description
         return (
           <Helmet
             htmlAttributes={{
               lang,
             }}
             title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
               {
                 name: `description`,
@@ -40,7 +38,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 name: `twitter:creator`,
-                content: data.site.siteMetadata.author,
+                content: data.cms.seo.author,
               },
               {
                 name: `twitter:title`,
@@ -52,12 +50,12 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
             ]
               .concat(
-                keywords.length > 0
+                keywords
                   ? {
                       name: `keywords`,
-                      content: keywords.join(`, `),
+                      content: keywords,
                     }
-                  : []
+                  : ''
               )
               .concat(meta)}
           />
@@ -85,8 +83,8 @@ export default SEO
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
-    site {
-      siteMetadata {
+    cms {
+      seo(where: { id: "cjwmctoo2xn7f08195ekrd7x4" }) {
         title
         description
         author

@@ -1,14 +1,15 @@
 import React from 'react'
-import BackgroundImage from './background-image'
-import Recommendation from './recommendationnode'
+import Recommendation from './RecommendationNode'
 
 const Recommendations = ({ recommendations }) => {
   const RecommendationsList = recommendations.map(recommendation => (
     <Recommendation key={recommendation.id} recommendation={recommendation} />
   ))
   return (
-    <section className="section testimonials" style={{ position: 'relative' }}>
-      <BackgroundImage />
+    <section
+      className="section testimonials background-pattern"
+      style={{ position: 'relative' }}
+    >
       <div className="container">
         <h2 className="section-heading">Recommendations</h2>
         <div className="row testimonials-list">

@@ -1,6 +1,8 @@
+@import '../../assets/scss/base/_variables';
 // Skills
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .skills {
+  background-color: $orange;
   background-size: cover;
   color: #fff;
   padding-bottom: 5rem;
