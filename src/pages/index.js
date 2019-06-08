@@ -57,7 +57,7 @@ export const query = graphql`
       projectSection(where: { id: "cjwmh8cpfymop0819otcqo109" }) {
         heading
         desc
-        project {
+        project(where: { status: PUBLISHED }) {
           title
           slug
           logo {

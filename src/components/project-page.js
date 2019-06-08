@@ -75,7 +75,7 @@ export const query = graphql`
         tags
         desc
         link
-        projectImage {
+        projectImage(where: { status: PUBLISHED }) {
           url
           imageFile {
             childImageSharp {
