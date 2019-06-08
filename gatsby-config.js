@@ -4,13 +4,6 @@ require('dotenv').config({
 const path = require(`path`)
 
 module.exports = {
-  siteMetadata: {
-    title: `Lukasz Pietraszek`,
-    description: `Freelance Frontend developer with proven track-record over six years in creating clean, accessible and user-friendly responsive websites. Self motivated and adaptable, independent minded, with a keen eye for detail. Experienced in working remotely and as lead developer.`,
-    author: `@pietraszekl`,
-    footer: `Built by Lukasz Pietraszek using React and Gatsby.`,
-    aboutData: 'about.....',
-  },
   plugins: [
     `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
@@ -27,7 +20,6 @@ module.exports = {
         fieldName: process.env.GRAPHCMS_API_FIELDNAME,
         url: process.env.GRAPHCMS_API_URL,
         typeName: process.env.GRAPHCMS_API_TYPENAME,
-        refetchInterval: 60,
       },
     },
     `gatsby-plugin-sharp`,

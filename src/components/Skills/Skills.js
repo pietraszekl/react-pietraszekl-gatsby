@@ -3,13 +3,13 @@ import React from 'react'
 import './skills.scss'
 //import Skill from './skill.js'
 
-const Skills = ({ skills: { header, desc } }) => {
+const Skills = ({ skills: { header, desc, skillsList } }) => {
   // const SkillsList = skills.list.map((skill, i) => (
   //   <Skill key={i} skill={skill} />
   // ))
   return (
     <section
-      className="section skills"
+      className="section skills background-pattern"
       style={{
         position: 'relative',
       }}
@@ -20,9 +20,7 @@ const Skills = ({ skills: { header, desc } }) => {
         <div className="row">
           <p className="section-description">{desc}</p>
         </div>
-        <div className="row">
-          {/* <ul className="skills-list">{SkillsList}</ul> */}
-        </div>
+        <div className="row" dangerouslySetInnerHTML={{ __html: skillsList }} />
       </div>
     </section>
   )

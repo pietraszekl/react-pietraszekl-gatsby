@@ -1,16 +1,21 @@
 import React from 'react'
 //import { StaticQuery, graphql } from 'gatsby'
-// import HeroImage from './HeroImage'
-//import cv from '../assets/docs/Lukasz_Pietraszek_CV.pdf'
+import Image from 'gatsby-image'
 import './hero.scss'
 
-const Hero = ({ aboutAuthor: { jobtitle, name, bio } }) => {
+const Hero = ({ aboutAuthor: { jobtitle, name, bio, cv, heroImage } }) => {
   return (
     <section className="section hero">
       <div className="container">
         <div className="row">
           <div className="hero-profile-img flip-container ">
-            <div className="flipper">{/* <HeroImage /> */}</div>
+            <div className="flipper">
+              <Image
+                className="hero-image"
+                alt={name}
+                fixed={heroImage.imageFile.childImageSharp.fixed}
+              />
+            </div>
           </div>
           <h2 className="hero-sub-heading">{jobtitle}</h2>
           <hr className="u-hero-divider" />
@@ -38,7 +43,7 @@ const Hero = ({ aboutAuthor: { jobtitle, name, bio } }) => {
           <p className="section-description">{bio}</p>
 
           <a
-            href="/"
+            href={cv.url}
             className="button"
             target="_blank"
             rel="noopener noreferrer"

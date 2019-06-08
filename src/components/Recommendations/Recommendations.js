@@ -6,7 +6,10 @@ const Recommendations = ({ recommendations }) => {
     <Recommendation key={recommendation.id} recommendation={recommendation} />
   ))
   return (
-    <section className="section testimonials" style={{ position: 'relative' }}>
+    <section
+      className="section testimonials background-pattern"
+      style={{ position: 'relative' }}
+    >
       <div className="container">
         <h2 className="section-heading">Recommendations</h2>
         <div className="row testimonials-list">
