@@ -40,6 +40,7 @@
     "prop-types": "^15.7.2"
   },
   "scripts": {
+    "clear": "rimraf .cache",
     "develop": "gatsby develop",
     "build": "gatsby build",
     "start": "npm run develop",
