@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
+    "cypress": "^3.3.1",
     "eslint": "^4.19.1",
     "eslint-config-google": "^0.9.1",
     "eslint-config-prettier": "^2.9.0",
@@ -37,7 +38,8 @@
     "eslint-plugin-react": "^7.7.0",
     "prettier": "^1.13.7",
     "prettier-eslint-cli": "4.7.1",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "start-server-and-test": "^1.9.1"
   },
   "scripts": {
     "clear": "rimraf .cache",
@@ -45,6 +47,10 @@
     "build": "gatsby build",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
+    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run"
   }
 }
