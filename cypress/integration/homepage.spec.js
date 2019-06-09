@@ -9,5 +9,6 @@ context('Homepage', function() {
   it('Title should contain "Lukasz Pietraszek"', () => {
     // https://on.cypress.io/title
     cy.title().should('include', 'Lukasz Pietraszek')
+    cy.screenshot()
   })
 })

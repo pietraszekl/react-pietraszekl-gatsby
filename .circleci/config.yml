@@ -1,7 +1,11 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
 version: 2
 
 jobs:
-  build:
+  e2e:
     docker:
       # the Docker image with Cypress dependencies
       - image: cypress/base:8
@@ -32,3 +36,21 @@ jobs:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
+
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:8.11.3
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run: npm install
+      # run tests!
+      - run: npm test

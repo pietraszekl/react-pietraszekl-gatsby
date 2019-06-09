@@ -12,5 +12,6 @@ context('Viewport', () => {
   })
   it('footer should be visible', () => {
     cy.get('footer').scrollIntoView() // Scrolls 'footer' into view
+    cy.screenshot()
   })
 })
