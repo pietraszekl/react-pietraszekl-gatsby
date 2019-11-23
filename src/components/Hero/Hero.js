@@ -22,20 +22,26 @@ const Hero = ({ aboutAuthor: { jobtitle, name, bio, cv, heroImage } }) => {
           <h1 className="hero-heading">{name}</h1>
           <ul className="contact-icons twelve columns">
             <li className="contact-icons-item">
-              <a href="https://twitter.com/pietraszekl">
-                <div className="contact-icon icon icon-twitter" />
+              <a
+                href="https://twitter.com/pietraszekl"
+                className="contact-icon icon icon-twitter"
+              >
                 <div className="sr-only">twitter</div>
               </a>
             </li>
             <li className="contact-icons-item">
-              <a href="https://uk.linkedin.com/in/pietraszekl">
-                <div className="contact-icon icon icon-linkedin" />
+              <a
+                href="https://uk.linkedin.com/in/pietraszekl"
+                className="contact-icon icon icon-linkedin"
+              >
                 <div className="sr-only">linkedin</div>
               </a>
             </li>
             <li className="contact-icons-item">
-              <a href="https://github.com/pietraszekl">
-                <div className="contact-icon icon icon-github" />
+              <a
+                href="https://github.com/pietraszekl"
+                className="contact-icon icon icon-github"
+              >
                 <div className="sr-only">github</div>
               </a>
             </li>

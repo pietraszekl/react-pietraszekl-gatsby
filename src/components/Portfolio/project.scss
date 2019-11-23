@@ -88,6 +88,14 @@ section.project {
 }
 .slideshow {
   &__slides {
+    .slide {
+      border-bottom: 3px double rgba(255, 255, 255, 0.5);
+      margin-bottom: 30px;
+      &:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+    }
     img {
       max-width: 100%;
     }

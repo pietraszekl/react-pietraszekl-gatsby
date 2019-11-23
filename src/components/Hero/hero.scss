@@ -38,6 +38,8 @@
     line-height: 1;
     float: left;
     margin: 0 0.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
     &:hover {
       border-color: $orange;
       svg {
@@ -59,10 +61,19 @@
 }
 .icon-github {
   background-image: url('../../assets/images/icons/github.svg');
+  &:hover {
+    background-image: url('../../assets/images/icons/github-hover.svg');
+  }
 }
 .icon-twitter {
   background-image: url('../../assets/images/icons/twitter.svg');
+  &:hover {
+    background-image: url('../../assets/images/icons/twitter-hover.svg');
+  }
 }
 .icon-linkedin {
   background-image: url('../../assets/images/icons/linkedin.svg');
+  &:hover {
+    background-image: url('../../assets/images/icons/linkedin-hover.svg');
+  }
 }
